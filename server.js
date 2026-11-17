@@ -7,7 +7,7 @@ const app = express();
 const PORT = 3000;
 
 // CONFIG
-const USE_WEBCAM = true;
+const USE_WEBCAM = false;
 const STATIC_IMAGE_PATH = '/home/helloyanis/Images/Yanis Icon Pack/img2.jpg';
 const TEMP_IMAGE = path.join(__dirname, 'webcam.jpg');
 
