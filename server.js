@@ -7,8 +7,8 @@ const app = express();
 const PORT = 3000;
 
 // CONFIG
-const USE_WEBCAM = false;
-const STATIC_IMAGE_PATH = '/home/helloyanis/Images/Yanis Icon Pack/img2.jpg';
+const USE_WEBCAM = false; // Change this to true to use your real camera. !!WEBCAM MUST OUTPUT A 320x240 FEED!!, otherwise game will error out with "Camera error". Use OBS to change that
+const STATIC_IMAGE_PATH = '/home/path-to-your-image.jpg';
 const TEMP_IMAGE = path.join(__dirname, 'webcam.jpg');
 
 app.get('/img.jpg', (req, res) => {
@@ -70,5 +70,5 @@ function captureWebcam(callback) {
 }
 
 app.listen(PORT, '127.0.0.1', () => {
-    console.log(`Server running at http://127.0.0.1:${PORT}/img.jpg`);
+    console.log(`Server running at 127.0.0.1:${PORT} - Change in Dolphin Settings > Triforce > IP Redirect > MarioKart namcam2 > "Real" column to this IP and port.`);
 });
